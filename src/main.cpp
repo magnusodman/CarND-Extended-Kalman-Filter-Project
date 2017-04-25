@@ -2,11 +2,11 @@
 #include <iostream>
 #include <sstream>
 #include <vector>
-#include <stdlib.h>
+//#include <stdlib.h>
 #include "Eigen/Dense"
 #include "FusionEKF.h"
 #include "ground_truth_package.h"
-#include "measurement_package.h"
+//#include "measurement_package.h"
 
 using namespace std;
 using Eigen::MatrixXd;
@@ -119,6 +119,7 @@ int main(int argc, char* argv[]) {
     iss >> y_gt;
     iss >> vx_gt;
     iss >> vy_gt;
+
     gt_package.gt_values_ = VectorXd(4);
     gt_package.gt_values_ << x_gt, y_gt, vx_gt, vy_gt;
     gt_pack_list.push_back(gt_package);

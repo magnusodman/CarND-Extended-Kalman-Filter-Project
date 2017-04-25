@@ -3,6 +3,7 @@
 #include <vector>
 #include "Eigen/Dense"
 
+
 class Tools {
 public:
   /**
@@ -25,6 +26,7 @@ public:
   */
   Eigen::MatrixXd CalculateJacobian(const Eigen::VectorXd& x_state);
 
+    double NormalizeFi(double fi);
 };
 
 #endif /* TOOLS_H_ */
